@@ -8,7 +8,7 @@
     margin: auto;
     a {
       width: 120px;
-      height: 50px;
+      height: 40px;
       display: block;
       float: left;
       img {
@@ -17,7 +17,41 @@
         width: 100%;
       }
     }
-    span {
+    form {
+      position: relative;
+      top: 20px;
+      left: 95%;
+      transform: translate(-50%, -50%);
+      height: 40px;
+      length:150px;
+      width: 200px;
+      border-radius: 40px;
+      padding: 10px;
+      >input{
+        float: left;
+        padding: 2px;
+        border:2px solid;
+        border-radius:25px;
+        color: black;
+        font-size: 16px;
+        transition: 0.4s;
+        line-height: 22px;
+        width: 180px;
+      }
+      }
+   span.search-btn {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      float: right;
+      width: 20px;
+      height: 20px;
+      justify-content: center;
+      //align-items: center;
+      //transition: 0.4s;
+      //text-decoration: none;
+    }
+    span{
       float: right;
       height: 50px;
       line-height: 50px;
@@ -26,8 +60,12 @@
       font-size: 15px;
       font-weight: bold;
     }
+
   }
 }
+
+
+
 
 
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import style from './Index.module.scss'
 import CSSModules from 'react-css-modules'
 import { Modal, Icon } from 'antd'
-
+import './transparent.png'
 /**
  * 网站的顶部Header组件
  */
@@ -30,6 +30,29 @@ class Header extends Component {
       visible: true
     })
   }
+    search = () =>{
+    if (document.getElementById("search_input").value != "") {
+      window.open ("https://www.baidu.com/s?wd=" + "site:cnodejs.org " +document.getElementById("search_input").value);
+      document.getElementById("search_input").value = "";
+    }
+    return false;
+  }//搜索跳转百度
+
+   onKeyPress = (e) => {
+    var keyCode = null;
+
+    if(e.which)
+      keyCode = e.which;
+    else if(e.keyCode)
+      keyCode = e.keyCode;
+
+    if(keyCode == 13) {
+      this.search();
+      return false;
+    }
+    return true;
+  }
+
 
   render() {
     return (
@@ -41,7 +64,20 @@ class Header extends Component {
               alt="网站logo"
             />
           </a>
-          <span onClick={this.showModal}>关于</span>
+          <a >
+          <form onSubmit={this.search} className="search-box">
+            <input autoFocus id="search_input" className="search-txt" type="text" autoComplete="off"
+                   placeholder="Type to search"  οnkeypress={this.onKeyPress(Event)}/>
+          </form>
+          </a>
+          <a>
+            <span className="search-btn" onClick={this.search} >
+              搜索
+            </span>
+          </a>
+
+          <span onClick={this.showModal} className="about">关于</span>
+
         </div>
         <Modal
           title="关于本项目"
