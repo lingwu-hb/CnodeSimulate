@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Header from './components/Header/Index'
 import './App.scss'
 
 /**
@@ -8,7 +9,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                测试
+                hanbonb
             </div>
         )
     }
