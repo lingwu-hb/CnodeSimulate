@@ -17,6 +17,9 @@ class Topics extends Component {
             return <Skeleton active />
         }
         const items = this.props.list.map(item => {
+            if(!item.author.loginname){
+                return null
+            }
             return (
                 <div styleName="topic" key={item.id}>
                     <Link to={'/user/' + item.author.loginname}>
