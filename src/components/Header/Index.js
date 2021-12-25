@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import style from './Index.module.scss'
 import CSSModules from 'react-css-modules'
 import { Modal, Icon } from 'antd'
-import './transparent.png'
 /**
  * 网站的顶部Header组件
  */
