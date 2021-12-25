@@ -68,7 +68,7 @@ class Home extends Component {
     const viewH = document.documentElement.clientHeight
     const scrollH =
       document.body.scrollTop || document.documentElement.scrollTop
-    if (viewH + scrollH >= sumH) {
+    if (viewH + scrollH + 50 >= sumH) {
       this.getTopics()
     }
   }
