@@ -288,7 +288,7 @@ module.exports = {
                         loader: require.resolve('babel-loader'),
                         options: {
                             customize: require.resolve(
-                                'babel-preset-config/webpack-overrides'
+                                'babel-preset-react-app/webpack-overrides'
                             ),
 
                             plugins: [
@@ -321,7 +321,7 @@ module.exports = {
                             compact: false,
                             presets: [
                                 [
-                                    require.resolve('babel-preset-config/dependencies'),
+                                    require.resolve('babel-preset-react-app/dependencies'),
                                     { helpers: true }
                                 ]
                             ],
