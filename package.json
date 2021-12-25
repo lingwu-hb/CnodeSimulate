@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.1.0",
-    "@svgr/webpack": "2.4.1",
+    "@svgr/webpack": "4.1.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",
@@ -34,7 +34,7 @@
     "jest-resolve": "23.6.0",
     "mini-css-extract-plugin": "0.4.3",
     "moment": "^2.22.2",
-    "node-sass": "4.14.1",
+    "node-sass": "^6.0.1",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "pnp-webpack-plugin": "1.1.0",
     "postcss-flexbugs-fixes": "4.1.0",
@@ -48,7 +48,10 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "resolve": "1.8.1",
-    "sass-loader": "7.1.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "sass-loader": "^6.0.1",
     "style-loader": "0.23.0",
     "terser-webpack-plugin": "1.1.0",
     "url-loader": "1.1.1",
@@ -74,7 +77,9 @@
   "devDependencies": {
     "antd": "^3.10.8",
     "axios": "^0.18.0",
-    "react-css-modules": "^4.7.8"
+    "node-sass": "^6.0.1",
+    "react-css-modules": "^4.7.8",
+    "react-redux": "^7.2.6"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -118,6 +123,14 @@
     ]
   },
   "babel": {
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ]
+    ],
     "presets": [
       "react-app"
     ]
